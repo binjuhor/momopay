@@ -20,14 +20,14 @@
     <tbody class="border-none-t">
     <tr class="bg-white">
         <td colspan="3">
-            <div class="float-left" style="margin-top: 5px;">
+            <div class="float-start" style="margin-top: 5px;">
                 <div
                     class="payment-name-label-group @if (get_payment_setting('status', MOMOPAY_PAYMENT_METHOD_NAME) == 0) hidden @endif">
                     <span class="payment-note v-a-t">{{ trans('plugins/payment::payment.use') }}:</span> <label
                         class="ws-nm inline-display method-name-label">{{ get_payment_setting('name', MOMOPAY_PAYMENT_METHOD_NAME) }}</label>
                 </div>
             </div>
-            <div class="float-right">
+            <div class="float-end">
                 <a class="btn btn-secondary toggle-payment-item edit-payment-item-btn-trigger @if ($momopayStatus == 0) hidden @endif">{{ trans('plugins/payment::payment.edit') }}</a>
                 <a class="btn btn-secondary toggle-payment-item save-payment-item-btn-trigger @if ($momopayStatus == 1) hidden @endif">{{ trans('plugins/payment::payment.settings') }}</a>
             </div>
@@ -110,7 +110,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 bg-white text-right">
+            <div class="col-12 bg-white text-end">
                 <button class="btn btn-warning disable-payment-item @if ($momopayStatus == 0) hidden @endif"
                         type="button">{{ trans('plugins/payment::payment.deactivate') }}</button>
                 <button
